@@ -13,12 +13,13 @@ import java.util.Date;
 @AllArgsConstructor
 public class BovineDTO {
 
-    private String id;
-    private String name;
-    private String status;
-    private String gender;
-    private String breed;
-    private Double weight;
-    private Date birth;
-    private String description;
+    String id;
+    String name;
+    String status;
+    String gender;
+    String breed;
+    Double weight;
+    Date birth;
+    String description;
+    Long herdId;
 }

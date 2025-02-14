@@ -13,7 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 public class HerdDTO {
 
-    private String id;
-    private String name;
-    private List<BovineDTO> bovines;
+    String id;
+    String name;
+    List<BovineDTO> bovines;
 }

@@ -1,6 +1,7 @@
 package br.com.iotasoftware.gadoapp.gadoappapiv2.controller;
 
 import br.com.iotasoftware.gadoapp.gadoappapiv2.dto.BovineDTO;
+import br.com.iotasoftware.gadoapp.gadoappapiv2.service.BovineService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,7 +12,7 @@ import java.util.List;
 public class BovineController {
 
     @Autowired
-    private BovineService bovineService; // Business logic layer
+    private BovineService bovineService;
 
     @PostMapping
     public BovineDTO addBovine(@RequestBody BovineDTO bovineDTO) {
