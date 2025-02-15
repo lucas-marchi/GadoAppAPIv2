@@ -21,5 +21,5 @@ public class BovineDTO {
     Double weight;
     Date birth;
     String description;
-    Long herdId;
+    Integer herdId;
 }
