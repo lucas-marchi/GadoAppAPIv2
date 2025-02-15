@@ -21,14 +21,9 @@ public class Herd {
     @Column(nullable = false)
     private String name;
 
-    @OneToMany(mappedBy = "herd", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "herdId", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Bovine> bovines = new ArrayList<>();
 
     public Herd() {
-    }
-
-    public Herd(Integer id, String name) {
-        this.id = id;
-        this.name = name;
     }
 }

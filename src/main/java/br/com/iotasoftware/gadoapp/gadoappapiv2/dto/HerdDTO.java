@@ -1,19 +1,15 @@
 package br.com.iotasoftware.gadoapp.gadoappapiv2.dto;
 
-import br.com.iotasoftware.gadoapp.gadoappapiv2.model.Herd;
-import jakarta.persistence.Version;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class HerdRequestDTO {
+public class HerdDTO {
     private Integer id;
     private String name;
 
