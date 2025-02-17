@@ -39,8 +39,8 @@ public class BovineService {
                     .birth(dto.getBirth())
                     .description(dto.getDescription())
                     .herdId(dto.getHerdId())
-                    .dadId(dto.getDadId())
                     .momId(dto.getMomId())
+                    .dadId(dto.getDadId())
                     .build();
             bovineRepository.save(newBovine);
         }

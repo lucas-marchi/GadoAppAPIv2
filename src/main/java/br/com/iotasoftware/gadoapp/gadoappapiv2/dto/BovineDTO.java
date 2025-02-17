@@ -1,5 +1,6 @@
 package br.com.iotasoftware.gadoapp.gadoappapiv2.dto;
 
+import br.com.iotasoftware.gadoapp.gadoappapiv2.model.Bovine;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -8,9 +9,7 @@ import lombok.NoArgsConstructor;
 import java.util.Date;
 
 @Data
-@Builder
 @NoArgsConstructor
-@AllArgsConstructor
 public class BovineDTO {
 
     private Integer id;
@@ -24,6 +23,20 @@ public class BovineDTO {
     private Integer herdId;
     private Integer momId;
     private Integer dadId;
+
+    public BovineDTO(Bovine bovine) {
+        this.id = bovine.getId();
+        this.name = bovine.getName();
+        this.status = bovine.getStatus();
+        this.gender = bovine.getGender();
+        this.breed = bovine.getBreed();
+        this.weight = bovine.getWeight();
+        this.birth = bovine.getBirth();
+        this.description = bovine.getDescription();
+        this.herdId = bovine.getHerdId();
+        this.momId = bovine.getMomId();
+        this.dadId = bovine.getDadId();
+    }
 
     public Integer getId() { return id; }
     public void setId(Integer id) { this.id = id; }

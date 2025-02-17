@@ -1,5 +1,6 @@
 package br.com.iotasoftware.gadoapp.gadoappapiv2.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -33,11 +34,14 @@ public class Bovine {
 
     private String description;
 
-    @Column(nullable = false)
+    @JoinColumn(name = "herd_id")
+    @JsonBackReference
     private Integer herdId;
 
+    @JoinColumn(name = "mom_id")
     private Integer momId;
 
+    @JoinColumn(name = "dad_id")
     private Integer dadId;
 
     public Bovine() {
